@@ -5,6 +5,7 @@ class DaysController < ApplicationController
 
   def show
     @day = Day.find(params[:id])
+    @times = Day.attribute_names - ['id', 'created_at', 'updated_at']
   end
 
   def new
