@@ -1,0 +1,254 @@
+* {
+  box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+}
+
+::-moz-selection {
+  background:#444;
+  color:#fff;
+  text-shadow:none;
+}
+
+::selection {
+  background:#444;
+  color:#fff;
+  text-shadow:none;
+}
+
+a {
+  outline:none;
+  -webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+  -moz-tap-highlight-color:rgba(0, 0, 0, 0);
+  -o-tap-highlight-color:rgba(0, 0, 0, 0);
+  tap-highlight-color:rgba(0, 0, 0, 0);
+  text-decoration:none;
+  border-bottom:1px dashed #ccc;
+}
+
+body {
+  background:#eee;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size:14px;
+  font-smoothing:antialiased;
+  -webkit-font-smoothing:antialiased;
+  height:100%;
+  line-height:150%;
+  margin:0;
+}
+
+footer, header, nav, section {
+  display:block;
+  overflow:hidden;
+}
+
+fieldset, img {
+  border:none;
+}
+
+form, legend {
+  margin:0;
+  padding:0;
+}
+
+footer, header, nav, section, form, fieldset {
+  overflow:hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height:2rem;
+  margin:0 0 1rem 0;
+  padding:0;
+  &.underlined {
+    border-bottom:1px solid #ccc;
+  }
+}
+
+h1 { font-size:140%; }
+h2 { font-size:140%; }
+h3 { font-size:120%; }
+h4 { font-size:120%; }
+h5 { font-size:110%; }
+h6 { font-size:100%; }
+
+hr {
+  border:none;
+  border-bottom:1px solid #ccc;
+  height:0;
+  margin:3em 0;
+}
+
+html {
+  -webkit-text-size-adjust:100%;
+  -ms-text-size-adjust:100%;
+  height:100%;
+}
+
+input, select, textarea {
+  color:#444;
+  font-family:helvetica, arial, sans-serif;
+  font-size:0.8em;
+}
+
+p {
+  margin:0 0 1em 0;
+}
+
+small {
+  font-size:70%;
+}
+
+ul, ol {
+  margin:0 0 1em 0;
+  padding:0 0 0 2em;
+}
+
+#container {
+  background:#fff;
+  height:100%;
+  margin:0 auto;
+  max-width:500px;
+  overflow-y:scroll;
+  position:relative;
+  padding-top:50px;
+  width:100%;
+}
+
+header {
+  overflow:hidden;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  a {
+    background:darken(#c0ffee, 50%);
+    color:#fff;
+    display:block;
+    float:left;
+    font-size:2em;
+    font-weight:bold;
+    padding:0.5em 1em;
+    text-align:center;
+    text-decoration:none;
+    width:100%;
+  } 
+}
+.new-days-btn {
+  padding:1em;
+  text-align:center;
+  a {
+    background:darken(#c0ffee, 50%);
+    border-radius:100%;
+    color:#fff;
+    display:inline-block;
+    font-size:2em;
+    font-weight:bold;
+    height:50px;
+    line-height:46px;
+    text-align:center;
+    text-decoration:none;
+    vertical-align:middle;
+    width:50px;
+  }
+}
+
+#day-list {
+  font-size:1.25em;
+  margin:0;
+  padding:0;
+  li {
+    list-style:none;
+    margin:0;
+    overflow:hidden;
+    padding:0;
+    a {
+      border-bottom:1px solid #ccc;
+      display:block;
+      float:left;
+      padding:0.5em 1em;
+      width:100%;
+    }
+  }
+}
+
+#day {
+  padding:1em;
+  text-align:center;
+  h1 {
+    margin-bottom:2em;
+  }
+  .time {
+    display:inline-block;
+    text-align:center;
+    width:100px;
+    div {
+      background:#ccc;
+      border:1px solid #ccc;
+      border-radius:100%;
+      margin:1em auto;
+      overflow:hidden;
+      width:80px;
+      height:80px;
+      a {
+        background:#fff;
+        display:block;
+        width:38px;
+        height:80px;
+        &:first-child {
+          float:left;
+        }
+        &:last-child {
+          float:right;
+        }
+        &.sleep {
+          background:#2980b9;
+        }
+
+        &.work {
+          background:#27ae60;
+        }
+
+        &.personal {
+          background:#e67e22;
+        }
+
+        &.family {
+          background:#8e44ad;
+        }
+      }
+    }
+  }
+}
+
+table {
+  border:1px solid #ccc;
+  text-align:left;
+  max-width:300px;
+  margin:4em auto;
+  padding-bottom:5px;
+}
+.key {
+  background:#000;
+  width:20px;
+  height:20px;
+  display:inline-block;
+  margin-right:1em;
+  border-radius:100%;
+  position:relative;
+  top:5px;
+  &.sleep {
+    background:#2980b9;
+  }
+
+  &.work {
+    background:#27ae60;
+  }
+
+  &.personal {
+    background:#e67e22;
+  }
+
+  &.family {
+    background:#8e44ad;
+  }
+}

@@ -1,0 +1,38 @@
+<div id="day" data-url="<%= day_path @day %>">
+  <h1><%= @day.created_at.strftime("%A, %b %d, %Y") %></h1>
+  <% hr = 12 %>
+  <% columns = Day.attribute_names - ['id', 'created_at'] %>
+  <% columns.each_slice(2) do |hour| %>
+    <% hr = 1 if hr > 12 %>
+    <% if hour.count == 2 %>
+      <%
+        if hour.first.include? "am"
+          ampm = "am"
+        else
+          ampm = "pm"
+        end
+      %>
+      <div class="time">
+        <%= hr %><%=ampm %>
+        <div>
+          <% hour.each do |time| %>
+            <a href="" data-time="<%= time %>" class="time-set <%= @day[time] %>"></a>
+          <% end %>
+        </div>
+      </div>
+      <% hr = hr + 1 %>
+    <% end %>
+  <% end %>
+  <table border="0" cellspacing="0" cellpadding="3" width="100%">
+    <tr>
+      <td width="50%"><span class="key sleep"></span> Sleep</td>
+      <td width="50%"><span class="key work"></span> Work</td>
+    </tr>
+    <tr>
+      <td width="50%"><span class="key personal"></span> Personal</td>
+      <td width="50%"><span class="key family"></span> Family</td>
+    </tr>
+  </table>
+</div>
+
+
