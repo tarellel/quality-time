@@ -11,7 +11,9 @@
 <body>
 <div id="container">
   <header>
-    <%= link_to "Quality Time", root_path %>
+    <%= link_to root_path do %>
+      <% unless @back_arrow_stats == false %><b>&#9664;</b><% end %> Quality Time
+    <% end %>
   </header>
   <div id="page">
     <%= yield %>

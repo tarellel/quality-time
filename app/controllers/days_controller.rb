@@ -1,10 +1,16 @@
 class DaysController < ApplicationController
   def index
     @days = Day.all.order(created_at: :desc)
+    @back_arrow_stats = false
   end
 
   def show
     @day = Day.find(params[:id])
+    @times = Day.attribute_names - ['id', 'created_at', 'updated_at']
+  end
+
+  def summary
+    @days = Day.all.order(created_at: :desc)
     @times = Day.attribute_names - ['id', 'created_at', 'updated_at']
   end
 

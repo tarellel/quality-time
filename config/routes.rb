@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get "/summary" => "days#summary", as: :summary
   resources :days
   root 'days#index'
 

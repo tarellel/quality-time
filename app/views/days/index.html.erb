@@ -3,6 +3,7 @@
     <li><%= link_to d.created_at.strftime("%A, %b %d, %Y"), d %></li>
   <% end %>
 </ul>
-<div class="new-days-btn">
-  <%= link_to "+", new_day_path %>
+<div class="btns">
+  <%= link_to "+ Day", new_day_path %>
+  <%= link_to "Summary", summary_path, class: "summary-btn" %>
 </div>

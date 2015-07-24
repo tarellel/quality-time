@@ -1,0 +1,17 @@
+<div id="summary">
+  <h1>Summary</h1>
+  <ul>
+    <% @days.each do |day| %>
+    <li>
+      <span><%= day.created_at.strftime("%m/%d/%Y") %></span>
+      <div class="summary-bar">
+        <% @times.each do |time| %>
+          <b class="<%=day[time]%>"></b>
+        <% end %>
+      </div>
+    </li>
+    <% end %>
+  </ul>
+
+  <%= render 'legend' %>
+</div>
