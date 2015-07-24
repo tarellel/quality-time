@@ -53,7 +53,7 @@ a {
 }
 
 body {
-  background:#eee;
+  background:#def;
   font-family: Helvetica, Arial, sans-serif;
   font-size:14px;
   font-smoothing:antialiased;
@@ -117,6 +117,7 @@ ul, ol {
 
 #container {
   background:#fff;
+  box-shadow:0 0 10px #aaa;
   height:100%;
   margin:0 auto;
   max-width:500px;
@@ -152,6 +153,8 @@ header {
 }
 
 .btns {
+  background:#eee;
+  border-bottom:1px solid #ccc;
   padding:1em;
   text-align:center;
   a {
@@ -159,10 +162,10 @@ header {
     border-radius:0.5em;
     color:#fff;
     display:inline-block;
-    font-size:1.5em;
+    font-size:1.25em;
     font-weight:bold;
-    height:50px;
-    line-height:46px;
+    height:40px;
+    line-height:36px;
     margin:0 0.5em;
     padding:0 1em;
     text-align:center;
@@ -266,18 +269,32 @@ table {
       padding:0.5em 0;
       span {
         display:block;
-        width:100px;
       }
       .summary-bar {
         border:1px solid #aaa;
-        max-width:434px;
+        max-width:242px;
         overflow:hidden;
         b {
           display:inline-block;
           float:left;
-          width:9px;
+          width:5px;
           height:10px;
           @include time_types;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 460px) {
+  #summary {
+    ul {
+      li {
+        .summary-bar {
+          max-width:434px;
+          b {
+            width:9px;
+          }
         }
       }
     }

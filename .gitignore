@@ -5,6 +5,7 @@
 #   git config --global core.excludesfile '~/.gitignore_global'
 
 .DS_Store
+Thumbs.db
 
 # Ignore bundler config.
 /.bundle
@@ -14,3 +15,10 @@
 /log/*
 !/log/.keep
 /tmp
+
+
+# Application Specific Files
+Gemfile.lock
+db/*.sqlite3
+log/*.log
+tmp/**/*

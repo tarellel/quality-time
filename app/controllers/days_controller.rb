@@ -26,7 +26,9 @@ class DaysController < ApplicationController
 
   def update
     @day = Day.find(params[:id])
-    if @day.update(model_params)
+
+    @day.validate_field(model_params.keys)
+    if @day.update_attributes(model_params)
       render json: :nil, status: 200
     else
       render json: :nil, status: 406
@@ -82,7 +84,7 @@ class DaysController < ApplicationController
       :ten_pm,
       :ten_thirty_pm,
       :eleven_pm,
-      :eleven_thirty_pm 
+      :eleven_thirty_pm
     )
   end
 end

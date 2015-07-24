@@ -1,5 +1,7 @@
 jQuery ->
 
+  moment_types = ['work','personal','family','friends','unknown','wasted','sleep']
+
   $('body').on 'click', '.time-set', (e) ->
     e.preventDefault()
 
@@ -25,17 +27,21 @@ jQuery ->
 
     else if $(this).hasClass('wasted')
       $(this).removeClass('wasted').addClass('unknown')
-      spent_on = 'wasted'
+      spent_on = 'unknown'
 
     else
       $(this).addClass('sleep')
       spent_on ='sleep'
 
-    $.ajax $('#day').data('url'),
-      dataType: 'JSON',
-      method: 'PATCH',
-      data: {
-        day: {
-          "#{$(this).data('time')}": spent_on
+    # verify action types are valid before submitting an ajax request
+    if(moment_types.indexOf(spent_on) > -1)
+      $.ajax $('#day').data('url'),
+        dataType: 'JSON',
+        method: 'PATCH',
+        data: {
+          day: {
+            "#{$(this).data('time')}": spent_on
+          }
         }
-      }
+    #else
+    #  alert('Invalid action!')

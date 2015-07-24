@@ -14,56 +14,56 @@
 ActiveRecord::Schema.define(version: 20150723054802) do
 
   create_table "days", force: :cascade do |t|
-    t.string   "twelve_am",        limit: 255
-    t.string   "twelve_thirty_am", limit: 255
-    t.string   "one_am",           limit: 255
-    t.string   "one_thirty_am",    limit: 255
-    t.string   "two_am",           limit: 255
-    t.string   "two_thirty_am",    limit: 255
-    t.string   "three_am",         limit: 255
-    t.string   "three_thirty_am",  limit: 255
-    t.string   "four_am",          limit: 255
-    t.string   "four_thirty_am",   limit: 255
-    t.string   "five_am",          limit: 255
-    t.string   "five_thirty_am",   limit: 255
-    t.string   "six_am",           limit: 255
-    t.string   "six_thirty_am",    limit: 255
-    t.string   "seven_am",         limit: 255
-    t.string   "seven_thirty_am",  limit: 255
-    t.string   "eight_am",         limit: 255
-    t.string   "eight_thirty_am",  limit: 255
-    t.string   "nine_am",          limit: 255
-    t.string   "nine_thirty_am",   limit: 255
-    t.string   "ten_am",           limit: 255
-    t.string   "ten_thirty_am",    limit: 255
-    t.string   "eleven_am",        limit: 255
-    t.string   "eleven_thirty_am", limit: 255
-    t.string   "twelve_pm",        limit: 255
-    t.string   "twelve_thirty_pm", limit: 255
-    t.string   "one_pm",           limit: 255
-    t.string   "one_thirty_pm",    limit: 255
-    t.string   "two_pm",           limit: 255
-    t.string   "two_thirty_pm",    limit: 255
-    t.string   "three_pm",         limit: 255
-    t.string   "three_thirty_pm",  limit: 255
-    t.string   "four_pm",          limit: 255
-    t.string   "four_thirty_pm",   limit: 255
-    t.string   "five_pm",          limit: 255
-    t.string   "five_thirty_pm",   limit: 255
-    t.string   "six_pm",           limit: 255
-    t.string   "six_thirty_pm",    limit: 255
-    t.string   "seven_pm",         limit: 255
-    t.string   "seven_thirty_pm",  limit: 255
-    t.string   "eight_pm",         limit: 255
-    t.string   "eight_thirty_pm",  limit: 255
-    t.string   "nine_pm",          limit: 255
-    t.string   "nine_thirty_pm",   limit: 255
-    t.string   "ten_pm",           limit: 255
-    t.string   "ten_thirty_pm",    limit: 255
-    t.string   "eleven_pm",        limit: 255
-    t.string   "eleven_thirty_pm", limit: 255
-    t.datetime "created_at",                   null: false
-    t.datetime "updated_at",                   null: false
+    t.string   "twelve_am",        limit: 255, default: "unknown", null: false
+    t.string   "twelve_thirty_am", limit: 255, default: "unknown", null: false
+    t.string   "one_am",           limit: 255, default: "unknown", null: false
+    t.string   "one_thirty_am",    limit: 255, default: "unknown", null: false
+    t.string   "two_am",           limit: 255, default: "unknown", null: false
+    t.string   "two_thirty_am",    limit: 255, default: "unknown", null: false
+    t.string   "three_am",         limit: 255, default: "unknown", null: false
+    t.string   "three_thirty_am",  limit: 255, default: "unknown", null: false
+    t.string   "four_am",          limit: 255, default: "unknown", null: false
+    t.string   "four_thirty_am",   limit: 255, default: "unknown", null: false
+    t.string   "five_am",          limit: 255, default: "unknown", null: false
+    t.string   "five_thirty_am",   limit: 255, default: "unknown", null: false
+    t.string   "six_am",           limit: 255, default: "unknown", null: false
+    t.string   "six_thirty_am",    limit: 255, default: "unknown", null: false
+    t.string   "seven_am",         limit: 255, default: "unknown", null: false
+    t.string   "seven_thirty_am",  limit: 255, default: "unknown", null: false
+    t.string   "eight_am",         limit: 255, default: "unknown", null: false
+    t.string   "eight_thirty_am",  limit: 255, default: "unknown", null: false
+    t.string   "nine_am",          limit: 255, default: "unknown", null: false
+    t.string   "nine_thirty_am",   limit: 255, default: "unknown", null: false
+    t.string   "ten_am",           limit: 255, default: "unknown", null: false
+    t.string   "ten_thirty_am",    limit: 255, default: "unknown", null: false
+    t.string   "eleven_am",        limit: 255, default: "unknown", null: false
+    t.string   "eleven_thirty_am", limit: 255, default: "unknown", null: false
+    t.string   "twelve_pm",        limit: 255, default: "unknown", null: false
+    t.string   "twelve_thirty_pm", limit: 255, default: "unknown", null: false
+    t.string   "one_pm",           limit: 255, default: "unknown", null: false
+    t.string   "one_thirty_pm",    limit: 255, default: "unknown", null: false
+    t.string   "two_pm",           limit: 255, default: "unknown", null: false
+    t.string   "two_thirty_pm",    limit: 255, default: "unknown", null: false
+    t.string   "three_pm",         limit: 255, default: "unknown", null: false
+    t.string   "three_thirty_pm",  limit: 255, default: "unknown", null: false
+    t.string   "four_pm",          limit: 255, default: "unknown", null: false
+    t.string   "four_thirty_pm",   limit: 255, default: "unknown", null: false
+    t.string   "five_pm",          limit: 255, default: "unknown", null: false
+    t.string   "five_thirty_pm",   limit: 255, default: "unknown", null: false
+    t.string   "six_pm",           limit: 255, default: "unknown", null: false
+    t.string   "six_thirty_pm",    limit: 255, default: "unknown", null: false
+    t.string   "seven_pm",         limit: 255, default: "unknown", null: false
+    t.string   "seven_thirty_pm",  limit: 255, default: "unknown", null: false
+    t.string   "eight_pm",         limit: 255, default: "unknown", null: false
+    t.string   "eight_thirty_pm",  limit: 255, default: "unknown", null: false
+    t.string   "nine_pm",          limit: 255, default: "unknown", null: false
+    t.string   "nine_thirty_pm",   limit: 255, default: "unknown", null: false
+    t.string   "ten_pm",           limit: 255, default: "unknown", null: false
+    t.string   "ten_thirty_pm",    limit: 255, default: "unknown", null: false
+    t.string   "eleven_pm",        limit: 255, default: "unknown", null: false
+    t.string   "eleven_thirty_pm", limit: 255, default: "unknown", null: false
+    t.datetime "created_at",                                       null: false
+    t.datetime "updated_at",                                       null: false
   end
 
 end
