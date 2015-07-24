@@ -12,8 +12,14 @@ jQuery ->
       $(this).removeClass('personal').addClass('family')
       spent_on = 'family'
     else if $(this).hasClass('family')
-      $(this).removeClass('family')
-      spent_on = 'unknown'
+      $(this).removeClass('family').addClass('friends')
+      spent_on = 'friends'
+    else if $(this).hasClass('friends')
+      $(this).removeClass('friends').addClass('wasted')
+      spent_on = 'wasted'
+    else if $(this).hasClass('wasted')
+      $(this).removeClass('wasted').addClass('unknown')
+      spent_on = 'wasted'
     else
       $(this).addClass('sleep')
       spent_on ='sleep'

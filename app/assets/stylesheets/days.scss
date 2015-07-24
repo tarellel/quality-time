@@ -215,6 +215,14 @@ header {
         &.family {
           background:#8e44ad;
         }
+
+        &.friends {
+          background:#f0df00;
+        }
+
+        &.wasted {
+          background:#aaa;
+        }
       }
     }
   }
@@ -250,5 +258,13 @@ table {
 
   &.family {
     background:#8e44ad;
+  }
+
+  &.friends {
+    background:#f0df00;
+  }
+
+  &.wasted {
+    background:#aaa;
   }
 }
